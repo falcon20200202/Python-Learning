@@ -1,0 +1,47 @@
+今天学习了列表的创建、对列表元素进行操作、组织列表。
+列表是由一系列按特定顺序排列的元素组成。
+对列表元素的操作包括了元素的修改、增加、删除。
+组织列表包括了按字母排序、列表的倒序以及列表长度。
+
+练习题如下：
+#case3-1
+names = ['first','second','third','forth','fifth']
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
+print(names[4])
+#case3-2
+print(f'{names[0]}, good moring!')
+#case3-3
+ways = ['walk','run','bicycle']
+print(f"I would like to own a {ways[0]}.")
+#case3-4
+dinner = ['first','second','third']
+print(f"{dinner[0].title()}, would you like to have dinner with me? ")
+#case3-5
+print(f"{dinner[0].title()} can not attend")
+dinner_cannot = dinner.pop(0)
+dinner.insert(0,'forth')
+print(f"{dinner[0].title()}, would you like to have dinner with me? ")
+#case3-6
+print(f"I found a bigger table! ")
+dinner.insert(0,'fifth')
+dinner.insert(2,'sixth')
+dinner.append('seventh')
+print(f"{dinner[0].title()}, would you like to have dinner with me? ")
+#case3-7
+print(f"I'm sorry to inform you that we can only invite two people to dinner because the new table didn't arrive in time. ")
+dinner_cannot = dinner.pop(0)
+print(f"{dinner_cannot.title()}, sorry, we can not have dinner together")
+dinner_cannot = dinner.pop(0)
+print(f"{dinner_cannot.title()}, sorry, we can not have dinner together")
+dinner_cannot = dinner.pop(0)
+print(f"{dinner_cannot.title()}, sorry, we can not have dinner together")
+dinner_cannot = dinner.pop()
+print(f"{dinner_cannot.title()}, sorry, we can not have dinner together")
+print(f"{dinner[0].title()}, welcome!")
+print(f"{dinner[1].title()}, welcome!")
+del dinner[0]
+del dinner[0]
+print(dinner)
