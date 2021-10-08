@@ -1,0 +1,16 @@
+今天学习了第四章列表的操作。
+练习题如下：
+#case4-1
+pizzas = ['pizza1','pizza2','pizza3']
+for pizza in pizzas:
+    print(pizza)
+for pizza in pizzas:
+    print(f"I like {pizza} pizza.")
+print(f"I like {pizzas[0]}, {pizzas[1]}, {pizzas[2]}, I really love pizza!")
+#case4-2
+pets = ['dog','cat','bird']
+for pet in pets:
+    print(pet)
+for pet in pets:
+    print(f"A {pet} would make a great pet.")
+print(f"Any of these animals would make a great pet!")
