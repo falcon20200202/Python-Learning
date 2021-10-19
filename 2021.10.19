@@ -1,0 +1,27 @@
+今天，我学习了列表的历遍和复制
+练习程序如下：
+#case4-10
+players = ['charles','martina','michael','florence','eli']
+print("The first three items in the list are:")
+print(players[:3])
+print("Three items from the middle of the list are:")
+print(players[1:4])
+print("The last three items in the list are:")
+print(players[-3:])
+#case4-11
+pizzas = ['pizza1','pizza2','pizza3']
+friend_pizzas = pizzas[:]
+friend_pizzas.append('pizza4')
+print("My favorite pizzas are:")
+for pizza in pizzas[:]:
+    print(pizza)
+print("My friends's favorite pizzas are:")
+for pizza in friend_pizzas[:]:
+    print(pizza)
+#case4-12
+print("My favorite foods are:")
+for food in my_foods[:]:
+    print(food)
+print("My friend's favorite foods are:")
+for food in friend_pizzas[:]:
+    print(food)
