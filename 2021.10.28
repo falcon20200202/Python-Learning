@@ -27,3 +27,43 @@ vocabulary = {
 print(f"列表 : {vocabulary['列表']}.")
 print(f"元组 : {vocabulary['元组']}")
 print(f"字典 : {vocabulary['字典']}")
+
+#case6-4
+vocabulary = {
+    '列表': '用方括号[]表示列表，并用逗号分隔其中的元素',
+    '元组': '不可变的列表称为元组',
+    '字典': '字典是一系列键值对',
+}
+vocabulary['set'] = '不重复'
+for key,value in vocabulary.items():
+    print(f"{key}:{value}.")
+
+
+#case6-5
+rivers = {
+    'Yangtze River': 'China',
+    'Yellow River': 'China',
+    'nile': 'egypt',
+}
+for river,country in rivers.items():
+    print(f"The {river.title()} runs through {country.title()}.")
+for river in rivers.keys():
+    print(river.title())
+for country in rivers.values():
+    print(country.title())
+
+#case6-6
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+}
+
+old_name = favorite_languages.keys()
+names = ['jen','sarah','edward','phil','name5','name6']
+for name in names:
+    if name in old_name:
+        print(f"{name.title()}, thank you!")
+    else:
+        print(f"{name.title()}, Welcome to the survey.")
