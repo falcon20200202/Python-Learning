@@ -1,0 +1,29 @@
+今天做了使用字典的习题以及学习了遍历字典
+练习题如下：
+#case6-1
+person = {'first_name': 'first_name', 'last_name': 'last_name', 'age': 21, 'city': 'city'}
+print(person['first_name'])
+print(person['last_name'])
+print(person['age'])
+print(person['city'])
+
+#case6-2
+nums = {
+    'name1': 1,
+    'name2': 2,
+    'name3': 3,
+    'name4': 4,
+    'name5': 5,
+}
+
+print(f"Name1's favorite num is {nums['name1']}.")
+
+#case6-3
+vocabulary = {
+    '列表': '用方括号[]表示列表，并用逗号分隔其中的元素',
+    '元组': '不可变的列表称为元组',
+    '字典': '字典是一系列键值对',
+}
+print(f"列表 : {vocabulary['列表']}.")
+print(f"元组 : {vocabulary['元组']}")
+print(f"字典 : {vocabulary['字典']}")
