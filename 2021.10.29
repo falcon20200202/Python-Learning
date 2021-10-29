@@ -1,4 +1,4 @@
-今天学习了嵌套和用户输入
+今天学习了嵌套和用户输入以及部分while循环
 练习题如下：
 # case6-7
 person1 = {'first_name': 'first_name1', 'last_name': 'last_name1', 'age': 21, 'city': 'city1'}
@@ -70,3 +70,23 @@ for city, city_info in cities.items():
     print(f"{city.title()}'s information are:")
     for key, info in city_info.items():
         print(f"\t{key.title()}: {info}")
+
+# case7-1
+car = input("Whitch car do you want? ")
+print(f"Let me see if I can find you a {car}.")
+
+# case7-2
+num = input("How many people? ")
+num = int(num)
+if num > 8:
+    print("There are no empty seats.")
+else:
+    print("Available seats.")
+
+# case7-3
+num = input("Enter a number, and I'll tell you if it's a number is an integral multiple of ten: ")
+num = int(num)
+if num % 10 == 0:
+    print(f"{num} is an integral multiple of ten.")
+else:
+    print(f"{num} is not an integral multiple of ten.")
