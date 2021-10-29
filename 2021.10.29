@@ -1,0 +1,72 @@
+今天学习了嵌套和用户输入
+练习题如下：
+# case6-7
+person1 = {'first_name': 'first_name1', 'last_name': 'last_name1', 'age': 21, 'city': 'city1'}
+person2 = {'first_name': 'first_name2', 'last_name': 'last_name2', 'age': 21, 'city': 'city2'}
+person3 = {'first_name': 'first_name3', 'last_name': 'last_name3', 'age': 21, 'city': 'city3'}
+people = [person1, person2, person3]
+for person in people:
+    full_name = f"{person['first_name']} {person['last_name']}'s informations are:"
+    print(full_name)
+    print(person['age'])
+    print(person['city'])
+
+# case6-8
+pet1 = {
+    'pet_name': 'pet1',
+    'owner_name': 'owner1',
+}
+pet2 = {
+    'pet_name': 'pet2',
+    'owner_name': 'owner2',
+}
+pets = [pet1, pet2]
+for pet in pets:
+    print(f"{pet['pet_name']} is own to {pet['owner_name']}")
+
+# case6-9
+favorite_places = {
+    'A': ['d', 'e'],
+    'B': ['f'],
+    'C': ['g', 'h']
+}
+for key, values in favorite_places.items():
+    print(f"{key}'s favorite places are:")
+    for value in values:
+        print("\t" + value)
+
+# case6-10
+nums = {
+    'name1': [1,3],
+    'name2': [2,5,7,8],
+    'name3': [3,2,5,6],
+    'name4': [46,4,6,8],
+    'name5': [5,3,1,7],
+}
+for key, values in nums.items():
+    print(f"{key}'s favorite numbers are:")
+    for value in values:
+        print(f"\t{value}")
+
+# case6-11
+cities = {
+    'city1':{
+        'country': 'country1',
+        'population': 30,
+        'fact': 'fact1',
+    },
+    'city2':{
+        'country': 'country2',
+        'population': 50,
+        'fact': 'fact2',
+    },
+    'city3':{
+        'country': 'country3',
+        'population': 100,
+        'fact': 'fact3',
+    },
+}
+for city, city_info in cities.items():
+    print(f"{city.title()}'s information are:")
+    for key, info in city_info.items():
+        print(f"\t{key.title()}: {info}")
