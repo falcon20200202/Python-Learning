@@ -12,3 +12,19 @@ while flag:
         print(f"We will attend the {topping}!")
         
 # case7-5
+prompt = "\nPlease enter your age:"
+prompt += "\n(Enter '0' when you are finished.)"
+while True:
+    age = input(prompt)
+    age = int(age)
+    if age == 0:
+        break
+    elif age < 3:
+        price = 0
+    elif (age >= 3) and (age <= 12):
+        price = 10
+    elif age > 12:
+        price = 15
+    print(f"The price is {price}.")
+
+# case7-6
