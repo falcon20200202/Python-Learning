@@ -1,4 +1,4 @@
-今天继续学习了while循环
+今天继续学习了while循环和函数的部分内容
 练习题如下：
 # case7-4
 prompt = "\nPlease enter the name of topping:"
@@ -79,3 +79,15 @@ while flag:
     repeat = input("Woule you like to let another person respond? (yes/ no)")
     if repeat == 'no':
         break
+
+# case8-1
+def display_message():
+    """本章学习内容"""
+    print("In this chapter, we study functions. ")
+display_message()
+
+# case8-2
+def favorite_book(title):
+    """最喜欢的一本书"""
+    print(f"One of my favorite books is {title}.")
+favorite_book('Alice in Wonderland')
