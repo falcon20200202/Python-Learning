@@ -1,1 +1,14 @@
 今天继续学习了while循环
+练习题如下：
+# case7-4
+prompt = "\nPlease enter the name of topping:"
+prompt += "\n(Enter 'quit' when you are finished.)"
+flag = True
+while flag:
+    topping = input(prompt)
+    if topping == 'quit':
+        flag = False
+    else:
+        print(f"We will attend the {topping}!")
+        
+# case7-5
