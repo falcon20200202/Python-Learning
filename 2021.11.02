@@ -47,3 +47,35 @@ while active:
         elif age > 12:
             price = 15
         print(f"The price is {price}.")
+
+# case7-8
+sandwich_orders = ['sandwich1', 'sandwich2', 'sandwich3']
+finished_sandwichs = []
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    print(f"I made your {sandwich} sandwich.")
+    finished_sandwichs.append(sandwich)
+print(finished_sandwichs)
+
+# case7-9
+sandwich_orders = ['sandwich1', 'pastrami', 'sandwich2', 'pastrami','sandwich3', 'pastrami']
+finished_sandwichs = []
+print("Pastrami has been sold out.")
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    print(f"I made your {sandwich} sandwich.")
+    finished_sandwichs.append(sandwich)
+print(finished_sandwichs)
+
+# case7-10
+places = []
+flag = True
+while flag:
+    places = input("If you could visit one place in the world, where would you go? ")
+    print(places)
+    repeat = input("Woule you like to let another person respond? (yes/ no)")
+    if repeat == 'no':
+        break
