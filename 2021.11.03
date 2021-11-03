@@ -1,4 +1,4 @@
-今天学习了函数的传递实参和返回值
+今天学习了函数的传递实参、返回值、传递列表、传递任意数量实参
 练习题如下：
 # case8-6
 def city_country(city, country):
@@ -36,3 +36,40 @@ while True:
     else:
         num = int(num)
     print(make_album(name, album, num))
+
+# case8-9
+def show_messages(texts):
+    """文本消息"""
+    for text in texts:
+        print(text)
+
+texts = ['this is the first message', 'this is the second message', 'this is the third message']
+show_messages(texts)
+
+# case8-10
+def send_messages(texts,sent_messages):
+    """文本转移"""
+    while texts:
+        current_text = texts.pop()
+        print(current_text)
+        sent_messages.append(current_text)
+    return sent_messages
+
+texts = ['this is the first message', 'this is the second message', 'this is the third message']
+sent_messages = []
+print(send_messages(texts, sent_messages))
+print(texts)
+
+# case8-11
+def send_messages(texts,sent_messages):
+    """文本转移"""
+    while texts:
+        current_text = texts.pop()
+        print(current_text)
+        sent_messages.append(current_text)
+    return sent_messages
+
+texts = ['this is the first message', 'this is the second message', 'this is the third message']
+sent_messages = []
+print(send_messages(texts[:], sent_messages))
+print(texts)
