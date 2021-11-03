@@ -1,2 +1,38 @@
-今天学习了函数的传递实参
+今天学习了函数的传递实参和返回值
 练习题如下：
+# case8-6
+def city_country(city, country):
+    """城市所属国家"""
+    sentence = f"{city}, {country}"
+    return sentence
+
+print(city_country('Santiago', 'Chile'))
+
+# case8-7、case8-8
+def make_album(name, Album_name, num=None):
+    """歌手与专辑"""
+    if num:
+        album = {'name':name, 'Album_name':Album_name, 'num': num}
+    else:
+        album = {'name': name, 'Album_name': Album_name}
+    return album
+
+while True:
+    print("\nPlease tell me a name and a album")
+    print("(enter 'q' at any time to quit)")
+    prompt_num = "How many songs in it: "
+    prompt_num += "\n(enter 'n' if you do not want to enter.)"
+    name = input("name: ")
+    if name == 'q':
+        break
+    album = input("album: ")
+    if album == 'q':
+        break
+    num = input(prompt_num)
+    if num == 'q':
+        break
+    elif num == 'n':
+        num = None
+    else:
+        num = int(num)
+    print(make_album(name, album, num))
