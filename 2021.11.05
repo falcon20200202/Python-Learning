@@ -1,0 +1,30 @@
+今天学习了将函数存储在模块中并在其他.py文件中导入
+练习题如下：
+# case8-12
+def sandwiches(*sandwich):
+    """sandwiches"""
+    print(f"You ordered the following sandwiches:"
+          f"\n\t{sandwich}")
+
+sandwiches('sandwich1')
+sandwiches('sandwich1', 'sandwich2')
+sandwiches('sandwich1', 'sandwich2', 'sandwich3')
+
+# case8-13
+def build_profile(first, last, **user_info):
+    """创建一个字典，其中包含我们知道的有关用户的一切。"""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('first_name', 'last_name', location='Country', field='field')
+print(user_profile)
+
+# case8-14
+def make_car(manufacturer, model, **kwargs):
+    """car"""
+    kwargs['manufacturer'] = manufacturer
+    kwargs['model'] = model
+    return kwargs
+
+car = make_car('subaru', 'outback', color='blue', tow_package=True)
