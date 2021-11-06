@@ -1,4 +1,4 @@
-今天学习了使用类和实例
+今天学习了使用类和实例、继承
 练习题如下：
 # case9-1
 class Restaurant:
@@ -55,3 +55,70 @@ user1.greet_user()
 user2 = User('first2', 'last2')
 user2.describe_user()
 user2.greet_user()
+
+# case9-4
+class Restaurant:
+    """餐馆"""
+    def __init__(self, restaurant_name, cuisine_type):
+        """初始化属性restaurant_name和cuisine_type。"""
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+
+    def describe_restaurant(self):
+        """餐馆信息"""
+        print(f"{self.restaurant_name} {self.cuisine_type}")
+
+    def open_restaurant(self):
+        """正在营业"""
+        print(f"The reataurant {self.restaurant_name} is opening.")
+
+    def set_number_served(self, value):
+        """设置值"""
+        self.number_served = value
+
+    def increment_number_served(self, increment_value):
+        """增加值"""
+        self.number_served += increment_value
+
+restaurant = Restaurant('name', 'type')
+print(restaurant.number_served)
+restaurant.set_number_served(23)
+print(restaurant.number_served)
+restaurant.increment_number_served(100)
+print(restaurant.number_served)
+
+# case9-5
+class User:
+    """用户"""
+    def __init__(self, first_name, last_name):
+        """初始化属性first_name和last_name。"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.login_attempts = 0
+
+    def describe_user(self):
+        """用户摘要"""
+        full_name = f"{self.first_name} {self.last_name}"
+        print(f"Full name: {full_name}")
+
+    def greet_user(self):
+        """用户问候"""
+        print(f"Hello, {self.first_name} {self.last_name}")
+
+    def increment_login_attempts(self):
+        """属性值加1"""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """属性值重置0"""
+        self.login_attempts = 0
+
+user = User('first', 'last')
+i = 0
+while i < 3:
+    user.increment_login_attempts()
+    i += 1
+print(user.login_attempts)
+user.reset_login_attempts()
+print(user.login_attempts)
