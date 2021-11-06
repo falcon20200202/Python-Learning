@@ -21,3 +21,37 @@ print(restaurant.restaurant_name)
 print(restaurant.cuisine_type)
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+# case9-2
+restaurant1 = Restaurant('name1', 'type1')
+restaurant2 = Restaurant('name2', 'type2')
+restaurant3 = Restaurant('name3', 'type3')
+
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+restaurant3.describe_restaurant()
+
+# case9-3
+class User:
+    """用户"""
+    def __init__(self, first_name, last_name):
+        """初始化属性first_name和last_name。"""
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def describe_user(self):
+        """用户摘要"""
+        full_name = f"{self.first_name} {self.last_name}"
+        print(f"Full name: {full_name}")
+
+    def greet_user(self):
+        """用户问候"""
+        print(f"Hello, {self.first_name} {self.last_name}")
+
+user1 = User('first1', 'last1')
+user1.describe_user()
+user1.greet_user()
+
+user2 = User('first2', 'last2')
+user2.describe_user()
+user2.greet_user()
