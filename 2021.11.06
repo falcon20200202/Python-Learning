@@ -122,3 +122,36 @@ while i < 3:
 print(user.login_attempts)
 user.reset_login_attempts()
 print(user.login_attempts)
+
+# case9-6
+class IceCreamStand(Restaurant):
+    """冰激凌小店。"""
+
+    def __init__(self, restaurant_name, cuisine_type):
+        """初始化父类的属性"""
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['Mango', 'Apple']
+
+    def describe_icecreamstand(self):
+        """各种口味。"""
+        print(self.flavors)
+
+icecream = IceCreamStand('name', 'type')
+icecream.describe_icecreamstand()
+
+# case9-7
+class Admin(User):
+    """管理员。"""
+
+    def __init__(self, first_name, last_name):
+        """初始化父类"""
+        super().__init__(first_name, last_name)
+        self.privileges = ["can add post", "can delete post", "can ban user"]
+
+    def show_privileges(self):
+        """显示"""
+        for privilege in self.privileges:
+            print(privilege)
+
+admin = Admin('first', 'last')
+admin.show_privileges()
