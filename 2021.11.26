@@ -23,3 +23,27 @@ ten.roll_die()
 twenty = Die(20)
 twenty.roll_die()
 
+# case9-14
+from random import choice
+choices = ['0','1','2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e']
+selected = []
+x = 1
+while x <= 4:
+    selected.append(choice(choices))
+    x += 1
+print(selected)
+print(f"If numbers are {selected[0]}{selected[1]}{selected[2]}{selected[3]}, you won the prize! ")
+
+# case9-15
+choices = ['0','1','2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e']
+selected = []
+my_ticket = ['0', '3', '2', '7']
+i = 0
+while my_ticket != selected:
+    selected = []
+    x = 1
+    while x <= 4:
+        selected.append(choice(choices))
+        x += 1
+    i += 1
+print(i)
